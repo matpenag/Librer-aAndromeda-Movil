@@ -58,6 +58,13 @@ a {
 .menu-toggle {
   display: none;
 }
+
+.logo {
+  width: 100%;
+  max-width: 80px;
+  height: auto;
+  object-fit: contain;
+}
 main {
   grid-area: main;
   display: flex;
@@ -78,6 +85,20 @@ main {
   align-items: center;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+button {
+  background-color: #0077ff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-out;
+}
+
+button:hover {
+  background-color: rgba(200, 174, 27, 0.821);
 }
 
 .paginacion {
@@ -106,6 +127,7 @@ main {
   background-color: white;
   padding: 1rem;
   border-radius: 1rem;
+  cursor: pointer;
 }
 
 .producto img {
@@ -114,6 +136,11 @@ main {
   object-fit: contain;
   border-radius: 8px;
   background-color: white;
+  transition: all 3s ease-in-out;
+}
+
+.producto:hover {
+  transform: scale(1.2);
 }
 
 .producto h2 {
@@ -152,6 +179,64 @@ footer {
 }
 .items::-webkit-scrollbar-track {
   background-color: white;
+}
+.box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(200, 174, 27, 0.821);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 10; /* Asegura que esté encima de otros elementos */
+}
+
+.box:hover {
+  width: 120px;
+  height: 120px;
+  background-color: green;
+}
+
+.box p {
+  font-size: 24px;
+  color: white;
+}
+
+@keyframes example {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 350px;
+  }
+}
+
+/* Estilos para el botón de compra */
+.btn-comprar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #4caf50; /* Verde */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Separación de la animación */
+}
+.btn-comprar:hover {
+  background-color: #45a049; /* Verde más oscuro */
+}
+.btn-comprar i {
+  font-size: 18px; /* Tamaño del ícono */
 }
 
 /* Estilos para pantallas de más de 576px (y mayores) */
